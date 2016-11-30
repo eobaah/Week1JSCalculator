@@ -1,0 +1,31 @@
+
+#displayInput {
+  font-size:16px;
+}
+
+.button {
+  width:40px;
+  height:30px;
+  color:orange;
+  background-color: purple;
+}
+
+.display button{
+  position:relative;
+  left:2px;
+  top:2px;
+  height:35px;
+  color:black;
+  text-align:center;
+}
+
+.operator {
+  color:white;
+  background-color: orange;
+}
+
+.calcInterface {
+  display: block;
+  position: relative;
+  margin: auto;
+}
