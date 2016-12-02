@@ -1,6 +1,15 @@
 
+
+#wrapper {
+  position: relative;
+  top:10%;
+}
+
 #displayInput {
   font-size:16px;
+  border: 10px;
+  background-color: grey;
+  color: orange;
 }
 
 .button {
@@ -8,9 +17,10 @@
   height:30px;
   color:orange;
   background-color: purple;
+  border-radius: 30%;
 }
 
-.display button{
+.display button {
   position:relative;
   left:2px;
   top:2px;
@@ -28,4 +38,12 @@
   display: block;
   position: relative;
   margin: auto;
+}
+
+.center-block{
+    text-align: center;
+}
+
+.bright-pink {
+  color:pink;
 }
