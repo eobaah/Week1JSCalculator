@@ -7,11 +7,11 @@ function memRecall() {
 
 
 function memAdd() {
-  var mrc = document.getElementById("displayInput").value;
+  mrc = document.getElementById("displayInput").value;
 }
 
 function memClear() {
-  var mrc ="";
+  var mrc ="0";
 }
 
 function c(val){
