@@ -4,46 +4,67 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Calculator</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link href="animate.css" rel="stylesheet" type="text/css" />
+  <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+  $(document).ready(function(){
+      $('.equals').click(function(){
+        $("#displayInput").addClass("animated rubberBand");
+          });
+      });
+  </script>
+
+
 </head>
 <body>
-  <div class="calcInterface">
-  <div class="display"><input type="text" id="displayInput" readonly>
-  <div class="keys">
-
-      <p>
-      <input type="button" class="button operator" value="MRC" onclick='c("not defined")'>
-      <input type="button" class="button operator" value="(" onclick='math("(")'>
-      <input type="button" class="button operator" value=")" onclick='math(")")'>
-      <input type="button" class="button operator" value="/" onclick='math("/")'>
-    </p>
-    <p>
-      <input type="button" class="button" value="7" onclick='math("7")'>
-      <input type="button" class="button" value="8" onclick='math("8")'>
-      <input type="button" class="button" value="9" onclick='math("9")'>
-      <input type="button" class="button operator" value="*" onclick='math("*")'>
-    </p>
-    <p>
-      <input type="button" class="button" value="4" onclick='math("4")'>
-      <input type="button" class="button" value="5" onclick='math("5")'>
-      <input type="button" class="button" value="6" onclick='math("6")'>
-      <input type="button" class="button operator" value="-" onclick='math("-")'>
-    </p>
-    <p>
-      <input type="button" class="button" value="1" onclick='math("1")'>
-      <input type="button" class="button" value="2" onclick='math("2")'>
-      <input type="button" class="button" value="3" onclick='math("3")'>
-      <input type="button" class="button operator" value="+" onclick='math("+")'>
-    </p>
-    <p>
-      <input type="button" class="button" value="0" onclick='math("0")'>
-      <input type="button" class="button" value="." onclick='math(".")'>
-      <input type="button" class="button" value="C" onclick='c("")'>
-      <input type="button" class="button operator" value="=" onclick='e()'>
-    </p>
+  <div id="wrapper" class="container-fluid">
+    <div class="calcInterface center-block">
+      <div class="display"><input type="text" id="displayInput" readonly>
+        <div class="keys">
+            <p>
+              <input type="button" class="button operator" value="MRC" onclick='memRecall()'>
+              <input type="button" class="button operator" value="M+" onclick='memAdd()'>
+              <input type="button" class="button operator" value="MC" onclick='memClear()'>
+              <input type="button" class="button operator" value="/" onclick='math("/")'>
+            </p>
+            <p>
+              <input type="button" class="button" value="7" onclick='math("7")'>
+              <input type="button" class="button" value="8" onclick='math("8")'>
+              <input type="button" class="button" value="9" onclick='math("9")'>
+              <input type="button" class="button operator" value="*" onclick='math("*")'>
+            </p>
+            <p>
+              <input type="button" class="button" value="4" onclick='math("4")'>
+              <input type="button" class="button" value="5" onclick='math("5")'>
+              <input type="button" class="button" value="6" onclick='math("6")'>
+              <input type="button" class="button operator" value="-" onclick='math("-")'>
+            </p>
+            <p>
+              <input type="button" class="button" value="1" onclick='math("1")'>
+              <input type="button" class="button" value="2" onclick='math("2")'>
+              <input type="button" class="button" value="3" onclick='math("3")'>
+              <input type="button" class="button operator" value="+" onclick='math("+")'>
+            </p>
+            <p>
+              <input type="button" class="button" value="0" onclick='math("0")'>
+              <input type="button" class="button" value="." onclick='math(".")'>
+              <input type="button" class="button" value="C" onclick='c("")'>
+              <input type="button" class="button operator equals" value="=" onclick='e()'>
+            </p>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-<script src="script.js"></script>
+
+
 </body>
 </html>
