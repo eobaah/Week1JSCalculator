@@ -11,7 +11,7 @@ function memAdd() {
 }
 
 function memClear() {
-  var mrc ="0";
+  mrc ="0";
 }
 
 function c(val){
